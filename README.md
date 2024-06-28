@@ -1,6 +1,9 @@
 # basic
 
-A new Flutter project.
+A new Flutter project. 
+Consisting of these functions based on Udemy Flutter Lessons:
+1. Dice App
+2. Quiz App
 
 ## Getting Started
 
