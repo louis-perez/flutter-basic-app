@@ -43,7 +43,7 @@ class SummaryData extends StatelessWidget{
                   Text(
                     data['correct_answer'] as String, 
                     style: GoogleFonts.lato(
-                      color: const Color.fromARGB(255, 235, 247, 76),
+                      color: const Color.fromARGB(255, 157, 240, 255),
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
                     ),
@@ -52,7 +52,7 @@ class SummaryData extends StatelessWidget{
                   Text(
                     data['chosen_answer'] as String, 
                     style: GoogleFonts.lato(
-                      color: data['correct_answer'] == data['chosen_answer'] ? const Color.fromARGB(255, 235, 247, 76) : const Color.fromARGB(255, 240, 58, 58),
+                      color: data['correct_answer'] == data['chosen_answer'] ? const Color.fromARGB(255, 157, 255, 201) : const Color.fromARGB(255, 255, 94, 94),
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
                     ),

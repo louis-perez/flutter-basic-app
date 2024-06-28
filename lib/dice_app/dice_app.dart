@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CounterObject {
   int _counter = 0;
@@ -25,7 +26,14 @@ class CounterObject {
 
   Widget getImageDesc() {
     if(_counter == 7){
-      return const Text('Congrats. You won a bitcoin');
+      return Text(
+        'Congrats. You won a bitcoin', 
+        style: GoogleFonts.lato(
+          color: const Color.fromARGB(255,255,255,255),
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        )
+      );
     }
     return const Text('');
   }

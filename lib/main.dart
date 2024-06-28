@@ -103,7 +103,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   FloatingActionButton(
                     onPressed: () {setState(() {newCount.rollDice();});},
                     tooltip: 'Roll Dice',
-                    child: const Icon(Icons.question_mark_rounded),
+                    backgroundColor: const Color.fromARGB(255, 30, 136, 229),
+                    child: const Icon(Icons.question_mark_rounded, color: Colors.white),
                   ),
                 ],
               )
