@@ -1,3 +1,4 @@
+import 'package:basic/quiz_app/quiz_app.dart';
 import 'package:flutter/material.dart';
 import 'package:basic/dice_app/dice_app.dart';
 import 'package:basic/layouts/gradient_container.dart';
@@ -108,11 +109,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               )
             ]
           ),
-          const GradientContainer(
-            widgets: <Widget> [
-              Text('Hi'),
-            ]
-          ),
+          const Quiz(),
           const GradientContainer(
             widgets: <Widget> [
               Text('Hi'),

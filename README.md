@@ -1,4 +1,4 @@
-# basic
+# Basic Information
 
 A new Flutter project. 
 Consisting of these functions based on Udemy Flutter Lessons:
