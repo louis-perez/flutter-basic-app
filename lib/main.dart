@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     super.initState();
     newCount = CounterObject();
     newCount.setCounter = 0; // Initialize counter to 2
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   @override
@@ -71,9 +71,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             ),
             Tab(
               text: "Quiz App",
-            ),
-            Tab(
-              icon: Icon(Icons.brightness_5_sharp, color: Colors.white),
             ),
           ]
         )
@@ -111,11 +108,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             ]
           ),
           const Quiz(),
-          const GradientContainer(
-            widgets: <Widget> [
-              Text('Hi'),
-            ]
-          ),
         ],
       )
     );
