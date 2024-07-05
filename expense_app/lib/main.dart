@@ -3,6 +3,7 @@ import 'package:expense_app/Widgets/expenses.dart';
 import 'package:expense_app/Widgets/Expenses/expenses_create.dart';
 import 'package:expense_app/Models/expense_model.dart';
 import 'package:expense_app/Widgets/Chart/chart.dart';
+import 'package:flutter/services.dart';
 
 var normColorScheme = ColorScheme.fromSeed(
   seedColor: Colors.blue.shade500,
@@ -21,7 +22,12 @@ var darkColorScheme = ColorScheme.fromSeed(
 );
 
 void main() {
-  runApp(const MyApp());
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp
+  // ]).then((fn) {
+    runApp(const MyApp());
+  // });
 }
 
 class MyApp extends StatelessWidget {
@@ -83,26 +89,31 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _openAddExpense() {
+    final height =  MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     setState(() {  
       showModalBottomSheet(
-        enableDrag: true,
-        showDragHandle: true,
-        isScrollControlled: true,
-        context: context, 
-        builder: (ctx) {
-          return SizedBox(
-            height: MediaQuery.of(context).copyWith().size.height * 0.65,
-            child: SingleChildScrollView(
-              child: ExpensesCreate(addExpenseItem: addExpenseItem),
-            )
-          );
-        }
-      );
+          enableDrag: true,
+          showDragHandle: true,
+          isScrollControlled: true,
+          context: context, 
+          builder: (ctx) {
+            return SizedBox(
+              height: height > width ? height * 0.65 : height,
+              child: SingleChildScrollView(
+                child: ExpensesCreate(addExpenseItem: addExpenseItem),
+              )
+            );
+          }
+        );
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final height =  MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     Widget mainContent = const Center(
       child: Text('No expenses found. Start adding some!', 
       style: TextStyle(
@@ -112,17 +123,22 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     if(_registeredExpense.isNotEmpty){
-      mainContent = Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const SizedBox(height: 10,),
-          Chart(expenses: _registeredExpense),
-          Expenses(registeredExpense: _registeredExpense, removeExpense: removeExpenseItem,),
-          const SizedBox(height: 10),
-        ],
-      );
+      if(height > width) {
+        mainContent = Column(
+          children: [
+            Chart(expenses: _registeredExpense),
+            Expenses(registeredExpense: _registeredExpense, removeExpense: removeExpenseItem,),
+          ],
+        );
+      }else{
+        mainContent = Row(
+          children: [
+            Expanded(child: SingleChildScrollView(child: Chart(expenses: _registeredExpense))),
+            Expenses(registeredExpense: _registeredExpense, removeExpense: removeExpenseItem,),
+          ],
+        );
+      }
     }
-
 
     return Scaffold(
       appBar: AppBar(
@@ -141,9 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
-      body: Center(
-        child: mainContent
-      ),
+      body: mainContent
     );
   }
 }
