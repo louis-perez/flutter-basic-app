@@ -3,7 +3,7 @@ A collection of Flutter Mobile Apps project list based on [Udemy Tutorial](https
 # List of Apps
 
 ## basic_app
-Contains two apps combined. The dice apps, and the Flutter Quiz app. Project is done throughout June 24 ~ 28 2024.
+Contains two apps combined. The dice apps, and the Flutter Quiz app. The project is done throughout June 24 ~ 28 2024. This covers the 1st and 2nd section of the tutorial.
 
 ## expense_app
-Contains the expense tracker apps. User able to add new expense data. Remove the expense by sliding the item (using dismissable). A chart bar will also appear listing users expense data. The project is done throughout July 1  ~ July 5 2024.
+Contains the expense tracker apps. User able to add new expense data. Remove the expense by sliding the item (using dismissable). A chart bar will also appear listing users expense data. The project is done throughout July 1  ~ July 5 2024. This covers the 5th section of the tutorial.
