@@ -1,4 +1,4 @@
-A collection of Flutter project list based on [**Udemy Tutorial**](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/)
+A collection of Flutter projects based on [**Udemy Tutorial**](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/)
 
 All of the listed apps are all mobile (**Android**) oriented. The apps have only been tested on mobile (So far). Some bugs or clunky designs might appear if tested on other platforms.
 
