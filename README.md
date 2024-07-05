@@ -1,19 +1,9 @@
-# Basic Information
+A collection of Flutter Mobile Apps project list based on [Udemy Tutorial](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/)
 
-A new Flutter project. 
-Consisting of these functions based on Udemy Flutter Lessons:
-1. Dice App
-2. Quiz App
+# List of Apps
 
-## Getting Started
+## basic_app
+Contains two apps combined. The dice apps, and the Flutter Quiz app. Project is done throughout June 24 ~ 28 2024.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## expense_app
+Contains the expense tracker apps. User able to add new expense data. Remove the expense by sliding the item (using dismissable). A chart bar will also appear listing users expense data. The project is done throughout July 1  ~ July 5 2024.
